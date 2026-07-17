@@ -170,7 +170,6 @@ letter.style.display="block";
 }
 
 }
-
 function heart(){
 
 const h=document.createElement("div");
@@ -181,4 +180,19 @@ h.innerHTML=["❤️","💖","💕","💗"][Math.floor(Math.random()*4)];
 
 h.style.left=Math.random()*100+"vw";
 
-h.style.animationDuration=(
+h.style.animationDuration=(Math.random()*3+3)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},6000);
+
+}
+
+setInterval(heart,300);
+
+</script>
+
+</body>
+</html>
